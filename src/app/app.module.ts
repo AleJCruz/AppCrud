@@ -14,12 +14,14 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { CreateEditComponent } from './component/author/create-edit/create-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorComponent,
-    AuthorListarComponent
+    AuthorListarComponent,
+    CreateEditComponent
   ],
   imports: [
     BrowserModule,

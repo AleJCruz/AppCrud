@@ -15,4 +15,14 @@ export class AuthorService {
   list() : Observable<any>{
     return this.http.get<Author[]> (this.url + "authors");
   }
+
+  insert (author:Author){
+    return this.http.post(this.url+"author", author);
+  }
+  setList(listaNueva:Author[]){
+    this.listaCambio.next(listaNueva); //enviar la nueva lista a los suscriptores
+  }
+  getList(){
+   return this.listaCambio.asObservable();
+  }
 }

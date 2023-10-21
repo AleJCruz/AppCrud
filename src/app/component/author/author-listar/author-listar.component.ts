@@ -24,6 +24,9 @@ export class AuthorListarComponent implements OnInit{
       console.log("NGONINIT DE LISTAR");
       //El observable suscribe a un observador para que actualice la data cuando le envien
   this.authorService.list().subscribe(data=>this.dataSource.data=data);
+  this.authorService.getList().subscribe(data=>{
+    this.dataSource.data=data;
+  })
   }
   ngAfterViewInit(){
     this.dataSource.sort=this.sort;
