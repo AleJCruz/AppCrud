@@ -19,6 +19,12 @@ export class AuthorService {
   insert (author:Author){
     return this.http.post(this.url+"author", author);
   }
+  update(aut:Author){
+    return this.http.post(this.url+'author',aut);
+  }
+  listId(id:number){
+    return this.http.get<Author>(this.url+'author/'+id);
+  }
   setList(listaNueva:Author[]){
     this.listaCambio.next(listaNueva); //enviar la nueva lista a los suscriptores
   }

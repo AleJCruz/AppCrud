@@ -15,29 +15,33 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { CreateEditComponent } from './component/author/create-edit/create-edit.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorComponent,
     AuthorListarComponent,
-    CreateEditComponent
+    CreateEditComponent,
+    NavbarComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatButtonModule,
-    MatSortModule,
-    MatPaginatorModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        MatButtonModule,
+        MatSortModule,
+        MatPaginatorModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatToolbarModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

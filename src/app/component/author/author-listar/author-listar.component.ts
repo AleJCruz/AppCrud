@@ -12,7 +12,7 @@ import { AuthorService } from 'src/app/service/author.service';
 })
 export class AuthorListarComponent implements OnInit{
   lista:Author[]=[];
-  displayedColumns=['id','nameAuthor', 'emailAuthor', 'birthDateAuthor'];
+  displayedColumns=['id','nameAuthor', 'emailAuthor', 'birthDateAuthor', 'accion01'];
   dataSource=new MatTableDataSource<Author>();
   @ViewChild(MatPaginator) paginator:MatPaginator;
   @ViewChild(MatSort) sort:MatSort;
